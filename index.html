@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaHaHub</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤪</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card-container">
+        <h1 class="title">😂 HaHaHub 😂</h1>
+
+        <textarea 
+            id="joke-display"
+            class="joke-display"
+            placeholder="Your joke will appear here..."
+            readonly
+        ></textarea>
+
+        <div class="controls-container">
+
+            <!-- Random Joke Form -->
+            <div class="control-section">
+                <form id="random-joke-form">
+                    <button 
+                        type="submit"
+                        id="get-random-joke-btn"
+                        class="btn btn-blue"
+                    >
+                        Get Random Joke
+                    </button>
+                </form>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Custom Joke Form -->
+            <div class="control-section">
+                <h2 class="section-title">Custom Jokes</h2>
+
+                <form id="custom-joke-form">
+                    <fieldset>
+                        <legend>Select Genre:</legend>
+                        <div class="options-container">
+                            <label class="option-label">
+                                <input type="radio" name="genre" value="Misc" class="form-radio" checked>
+                                <span>Misc</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="genre" value="Programming" class="form-radio">
+                                <span>Programming</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="genre" value="Dark" class="form-radio">
+                                <span>Dark</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="genre" value="Spooky" class="form-radio">
+                                <span>Spooky</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="genre" value="Pun" class="form-radio">
+                                <span>Pun</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="genre" value="Christmas" class="form-radio">
+                                <span>Christmas</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="genre" value="Misc" class="form-radio" checked>
+                                <span>Misc</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Select Type:</legend>
+                        <div class="options-container">
+                            <label class="option-label">
+                                <input type="checkbox" id="type-single" value="single" class="form-checkbox" checked>
+                                <span>Single Part</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="checkbox" id="type-twopart" value="twopart" class="form-checkbox">
+                                <span>Two Part</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <button 
+                        type="submit"
+                        id="get-custom-joke-btn"
+                        class="btn btn-purple"
+                    >
+                        Get My Joke
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
